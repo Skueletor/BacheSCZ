@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "BacheSCZ",
+    "slug": "bache-scz",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "bachescz",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "BacheSCZ usa tu ubicación para ubicar el bache en el mapa."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "BacheSCZ usa tus fotos para adjuntar la imagen del bache.",
+          "cameraPermission": "BacheSCZ usa la cámara para tomar fotografías del bache."
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bachescz.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "BacheSCZ usa tu ubicación para ubicar el reporte.",
+        "NSCameraUsageDescription": "BacheSCZ usa la cámara para registrar el estado de la calle.",
+        "NSPhotoLibraryUsageDescription": "BacheSCZ usa tus fotos para adjuntarlas al reporte."
+      },
+      "icon": "./assets/logo.jpg"
+    },
+    "android": {
+      "package": "com.bachescz.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0F766E",
+        "foregroundImage": "./assets/logo.jpg"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "icon": "./assets/logo.jpg",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d0015fff-5804-4c55-af75-7c06d958b8fb"
+      }
+    }
+  }
+}
